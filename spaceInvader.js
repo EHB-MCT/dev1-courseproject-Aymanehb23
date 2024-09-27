@@ -11,6 +11,9 @@ tetrisLogo();
 function tetrisLogo(){
 
 
+ context.beginPath();
+ context.rect(100, 50, 75, 25);
+ context.stroke();
 
 
 
@@ -18,5 +21,5 @@ function tetrisLogo(){
 
 
 
-    
+
 }
