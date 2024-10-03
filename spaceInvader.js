@@ -22,15 +22,13 @@ function tetrisLogo() {
     context.closePath();
 
 
-
-
     context.beginPath();
     context.fillStyle = "pink";
     context.rect(100, 275, 200, 50);
     context.rect(150, 250, 100, 50);
     context.rect(100, 150, 75, 100);
     context.rect(225, 150,75, 100);
-    context.rect(150, 100,100, 50);
+    context.rect(130, 90,144, 60);
     
 
     context.fill();
@@ -38,25 +36,5 @@ function tetrisLogo() {
 
 
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
