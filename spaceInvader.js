@@ -28,7 +28,7 @@ function tetrisLogo() {
     context.rect(150, 250, 100, 50);
     context.rect(100, 150, 75, 100);
     context.rect(225, 150,75, 100);
-    context.rect(130, 90,144, 60);
+    context.rect(128, 90,144, 60);
     
 
     context.fill();
@@ -36,5 +36,4 @@ function tetrisLogo() {
 
 
     
-
 }

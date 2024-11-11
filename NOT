@@ -1,0 +1,26 @@
+ context.fillStyle = "Pink";
+    context.beginPath();
+    context.rect(186, 202, 290, 75);
+    context.fill();
+    
+
+
+
+    context.fillStyle= "blue";
+    context.beginPath();
+    context.rect(365,2,50,160);
+    context.fill();
+
+    context.fillStyle= "yellow";
+    context.beginPath();
+    context.rect(235,285,55,150);
+    context.fill();
+
+
+    context.fillStyle= "green";
+    context.beginPath();
+    context.rect(175,285,55,150);
+    context.fill(); 
+
+
+
