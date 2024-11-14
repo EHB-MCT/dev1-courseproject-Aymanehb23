@@ -11,17 +11,17 @@ function drawBook() {
     // Teken eerste rechthoek (linker boek)
     context.beginPath();
     context.rect(130, 150, 180, 300);
-    context.fillStyle = "black";  // zwarte kleur voor de rechthoek
+    context.fillStyle = "black";
     context.fill();
     context.closePath();
 
     // Voeg drie willekeurige cirkels toe in de eerste rechthoek
     drawRandomCircles(130, 150, 180, 300);
 
-    // Teken tweede rechthoek (rechter boek)
+
     context.beginPath();
     context.rect(370, 150, 180, 300);
-    context.fillStyle = "black";  // zwarte kleur voor de rechthoek
+    context.fillStyle = "black";
     context.fill();
     context.closePath();
 
