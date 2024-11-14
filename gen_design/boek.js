@@ -16,7 +16,7 @@ function drawBook() {
     context.closePath();
 
     // Voeg drie willekeurige cirkels toe in de eerste rechthoek
-    drawRandomCircles(130, 150, 180, 300);
+    drawRandomCircles(130, 150, 180, 300,);
 
 
     context.beginPath();
@@ -30,9 +30,9 @@ function drawBook() {
 }
 
 function drawRandomCircles(x, y, width, height) {
-    let circleRadius = 30; // Straal van de cirkels
+    let circleRadius = 20; // Straal van de cirkels
 
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 5; i++) {
         // Willekeurige positie voor elke cirkel
         let randomX = Math.random() * (width - 2 * circleRadius) + x + circleRadius;
         let randomY = Math.random() * (height - 2 * circleRadius) + y + circleRadius;

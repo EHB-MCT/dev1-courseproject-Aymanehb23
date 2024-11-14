@@ -1,5 +1,5 @@
 
-////////////////////////////////////////////////////////// Discussie 1
+<!-- ////////////////////////////////////////////////////////// Discussie 1 -->
 
 ```javascript
 //"use strict";
@@ -53,7 +53,8 @@ Nu krijg je twee zwarte rechthoeken met daarin cirkels die in verschillende kleu
 
 Ja, ik begrijp wat je bedoelt! Je wilt dus drie kleinere cirkels in elke rechthoek plaatsen. We zullen de cirkels kleiner maken en gelijkmatig in de rechthoek verdelen. Hier is de aangepaste versie van je code, waarin drie cirkels per rechthoek worden getekend:
 
-//////////////////////////////////////////////////////////// Discussie 2
+//////////////////////////////////////////////////////////// ////////////////Discussie 2
+
 
 "use strict";
 
@@ -134,7 +135,8 @@ function drawBook() {
 2. **Drie cirkels per rechthoek**: De cirkels worden gelijkmatig verdeeld binnen elke rechthoek. De Y-coördinaten voor de cirkels zijn gebaseerd op de hoogte van de rechthoek en de gewenste tussenruimte (`circleSpacing`), wat resulteert in drie cirkels binnen elke rechthoek.
 3. **Kleuren**: Elke cirkel heeft een unieke kleur, zodat ze goed opvallen (rood, groen, blauw voor het linker boek en geel, paars, oranje voor het rechter boek).
 
-///////////////////////////////////////////////// Discussie 3
+///////////////////////////////////////////////////////////////////// Discussie 3
+
 
 Ja, dat kan zeker! We kunnen de positie van de cirkels willekeurig maken door gebruik te maken van de `Math.random()` functie om de coördinaten van de cirkels elke keer dat de pagina wordt vernieuwd te veranderen.
 
