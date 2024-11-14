@@ -1,0 +1,218 @@
+
+////////////////////////////////////////////////////////// Discussie 1
+
+```javascript
+//"use strict";
+
+// let canvas = document.querySelector("canvas");
+//canvas.width = window.innerWidth;
+//canvas.height = window.innerHeight;
+//let context = canvas.getContext("2d");
+
+drawBook();
+
+//function drawBook() {
+	
+	context.beginPath();
+	context.rect(130, 150, 180, 300);
+	context.fillStyle = "black"; // zwarte kleur voor de rechthoek
+	context.fill();
+	context.closePath();
+
+	// Voeg een cirkel toe in de eerste rechthoek
+	context.beginPath();
+	context.arc(130 + 90, 150 + 150, 60, 0, Math.PI * 2); // Cirkel in de rechthoek
+	context.fillStyle = "red"; // rode kleur voor de cirkel
+	context.fill();
+	context.closePath();
+
+	// Teken tweede rechthoek (rechter boek)
+	context.beginPath();
+	context.rect(370, 150, 180, 300);
+	context.fillStyle = "black"; // zwarte kleur voor de rechthoek
+	context.fill();
+	context.closePath();
+
+	// Voeg een cirkel toe in de tweede rechthoek
+	context.beginPath();
+	context.arc(370 + 90, 150 + 150, 60, 0, Math.PI * 2); // Cirkel in de rechthoek
+	context.fillStyle = "blue"; // blauwe kleur voor de cirkel
+	context.fill();
+	context.closePath();
+//}
+```
+
+## Wat we hebben toegevoegd:
+
+1. **Kleuren voor de rechthoeken**: De rechthoeken worden nu zwart (`context.fillStyle = "black";`).
+2. **Cirkels in de rechthoeken**: We hebben `context.arc()` gebruikt om cirkels te tekenen binnen de rechthoeken. De cirkels zijn gevuld met verschillende kleuren (`red` voor de eerste rechthoek en `blue` voor de tweede).
+3. **Positie van de cirkels**: De cirkels zijn gepositioneerd in het midden van de rechthoeken door de coördinaten te berekenen op basis van de positie van de rechthoeken.
+
+Nu krijg je twee zwarte rechthoeken met daarin cirkels die in verschillende kleuren worden weergegeven!
+
+
+Ja, ik begrijp wat je bedoelt! Je wilt dus drie kleinere cirkels in elke rechthoek plaatsen. We zullen de cirkels kleiner maken en gelijkmatig in de rechthoek verdelen. Hier is de aangepaste versie van je code, waarin drie cirkels per rechthoek worden getekend:
+
+//////////////////////////////////////////////////////////// Discussie 2
+
+"use strict";
+
+let canvas = document.querySelector("canvas");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+let context = canvas.getContext("2d");
+
+drawBook();
+
+function drawBook() {
+    // Teken eerste rechthoek (linker boek)
+    context.beginPath();
+    context.rect(130, 150, 180, 300);
+    context.fillStyle = "black";  // zwarte kleur voor de rechthoek
+    context.fill();
+    context.closePath();
+
+    // Voeg drie kleinere cirkels toe in de eerste rechthoek
+    let circleRadius = 30; // Straal van de cirkels
+    let circleSpacing = 90; // Afstand tussen de cirkels
+
+    // Cirkel 1
+    context.beginPath();
+    context.arc(130 + 90, 150 + 75, circleRadius, 0, Math.PI * 2); // Cirkel 1
+    context.fillStyle = "red";
+    context.fill();
+    context.closePath();
+
+    // Cirkel 2
+    context.beginPath();
+    context.arc(130 + 90, 150 + 150, circleRadius, 0, Math.PI * 2); // Cirkel 2
+    context.fillStyle = "green";
+    context.fill();
+    context.closePath();
+
+    // Cirkel 3
+    context.beginPath();
+    context.arc(130 + 90, 150 + 225, circleRadius, 0, Math.PI * 2); // Cirkel 3
+    context.fillStyle = "blue";
+    context.fill();
+    context.closePath();
+
+
+    // Teken tweede rechthoek (rechter boek)
+    context.beginPath();
+    context.rect(370, 150, 180, 300);
+    context.fillStyle = "black";  // zwarte kleur voor de rechthoek
+    context.fill();
+    context.closePath();
+
+    // Voeg drie kleinere cirkels toe in de tweede rechthoek
+    // Cirkel 1
+    context.beginPath();
+    context.arc(370 + 90, 150 + 75, circleRadius, 0, Math.PI * 2); // Cirkel 1
+    context.fillStyle = "yellow";
+    context.fill();
+    context.closePath();
+
+    // Cirkel 2
+    context.beginPath();
+    context.arc(370 + 90, 150 + 150, circleRadius, 0, Math.PI * 2); // Cirkel 2
+    context.fillStyle = "purple";
+    context.fill();
+    context.closePath();
+
+    // Cirkel 3
+    context.beginPath();
+    context.arc(370 + 90, 150 + 225, circleRadius, 0, Math.PI * 2); // Cirkel 3
+    context.fillStyle = "orange";
+    context.fill();
+    context.closePath();
+}
+```
+
+### Wat we hebben veranderd:
+1. **Kleinere cirkels**: We hebben de straal van de cirkels verkleind naar `30` (voor een kleinere afmeting).
+2. **Drie cirkels per rechthoek**: De cirkels worden gelijkmatig verdeeld binnen elke rechthoek. De Y-coördinaten voor de cirkels zijn gebaseerd op de hoogte van de rechthoek en de gewenste tussenruimte (`circleSpacing`), wat resulteert in drie cirkels binnen elke rechthoek.
+3. **Kleuren**: Elke cirkel heeft een unieke kleur, zodat ze goed opvallen (rood, groen, blauw voor het linker boek en geel, paars, oranje voor het rechter boek).
+
+///////////////////////////////////////////////// Discussie 3
+
+Ja, dat kan zeker! We kunnen de positie van de cirkels willekeurig maken door gebruik te maken van de `Math.random()` functie om de coördinaten van de cirkels elke keer dat de pagina wordt vernieuwd te veranderen.
+
+Om de cirkels willekeurig binnen de rechthoek te plaatsen, moeten we ervoor zorgen dat de cirkels niet buiten de rechthoek vallen. We zorgen er dus voor dat de x- en y-coördinaten van de cirkels binnen de grenzen van de rechthoek blijven, rekening houdend met de straal van de cirkels.
+
+Hier is de aangepaste code waarin de cirkels willekeurig worden geplaatst elke keer dat je de pagina ververst:
+
+```javascript
+"use strict";
+
+let canvas = document.querySelector("canvas");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+let context = canvas.getContext("2d");
+
+drawBook();
+
+function drawBook() {
+    // Teken eerste rechthoek (linker boek)
+    context.beginPath();
+    context.rect(130, 150, 180, 300);
+    context.fillStyle = "black";  // zwarte kleur voor de rechthoek
+    context.fill();
+    context.closePath();
+
+    // Voeg drie willekeurige cirkels toe in de eerste rechthoek
+    drawRandomCircles(130, 150, 180, 300);
+
+    // Teken tweede rechthoek (rechter boek)
+    context.beginPath();
+    context.rect(370, 150, 180, 300);
+    context.fillStyle = "black";  // zwarte kleur voor de rechthoek
+    context.fill();
+    context.closePath();
+
+    // Voeg drie willekeurige cirkels toe in de tweede rechthoek
+    drawRandomCircles(370, 150, 180, 300);
+}
+
+function drawRandomCircles(x, y, width, height) {
+    let circleRadius = 30; // Straal van de cirkels
+
+    for (let i = 0; i < 3; i++) {
+        // Willekeurige positie voor elke cirkel
+        let randomX = Math.random() * (width - 2 * circleRadius) + x + circleRadius;
+        let randomY = Math.random() * (height - 2 * circleRadius) + y + circleRadius;
+
+        // Kies een willekeurige kleur voor de cirkel
+        let randomColor = getRandomColor();
+
+        // Teken de cirkel
+        context.beginPath();
+        context.arc(randomX, randomY, circleRadius, 0, Math.PI * 2);
+        context.fillStyle = randomColor;
+        context.fill();
+        context.closePath();
+    }
+}
+
+// Functie om een willekeurige kleur te genereren
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+```
+
+### Wat we hebben toegevoegd:
+1. **Willekeurige positie voor de cirkels**: De functie `drawRandomCircles(x, y, width, height)` tekent drie cirkels in willekeurige posities binnen de gegeven rechthoek. We gebruiken `Math.random()` om willekeurige x- en y-coördinaten te genereren binnen de grenzen van de rechthoek.
+   
+2. **Willekeurige kleuren voor de cirkels**: De functie `getRandomColor()` genereert een willekeurige hex-kleur. Elke cirkel krijgt een willekeurige kleur, zodat ze er anders uitzien elke keer dat de pagina wordt vernieuwd.
+
+3. **Cirkel positionering**: We zorgen ervoor dat de cirkels niet buiten de rechthoek vallen door de x- en y-coördinaten van de cirkels te beperken, rekening houdend met hun straal (`circleRadius`).
+
+### Hoe het werkt:
+- Elke keer dat je de pagina ververst (bijvoorbeeld door de browser te vernieuwen), worden de cirkels in een nieuwe willekeurige positie getekend binnen de rechthoek.
+- De kleuren van de cirkels zijn ook willekeurig en veranderen elke keer.
+
