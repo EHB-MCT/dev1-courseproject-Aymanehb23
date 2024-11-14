@@ -15,7 +15,7 @@ function drawBook() {
     context.fill();
     context.closePath();
 
-    // Voeg drie willekeurige cirkels toe in de eerste rechthoek
+    // Voeg willekeurige cirkels toe in de eerste rechthoek
     drawRandomCircles(130, 150, 180, 300,);
 
 
@@ -25,7 +25,7 @@ function drawBook() {
     context.fill();
     context.closePath();
 
-    // Voeg drie willekeurige cirkels toe in de tweede rechthoek
+    // Voeg willekeurige cirkels toe in de tweede rechthoek
     drawRandomCircles(370, 150, 180, 300);
 }
 
