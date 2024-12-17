@@ -2,11 +2,11 @@
 
 
 
-gemaakt met behulp van chatgpt te 14 / 11 / 2024    
+//gemaakt met behulp van chatgpt vanaf :14 / 11 / 2024    
  LINK discussie:
 
 https://chatgpt.com/share/67443f9b-4e64-8008-9f8f-fa431ad25615
-https://chatgpt.com/share/67443f9b-4e64-8008-9f8f-fa431ad25615
+
 
 
 
@@ -218,17 +218,15 @@ function getRandomColor() {
     }
     return color;
 }
-```
-### Wat we hebben toegevoegd:
-1. **Willekeurige positie voor de cirkels**: De functie `drawRandomCircles(x, y, width, height)` tekent drie cirkels in willekeurige posities binnen de gegeven rechthoek. We gebruiken `Math.random()` om willekeurige x- en y-coördinaten te genereren binnen de grenzen van de rechthoek.
+//1. **Willekeurige positie voor de cirkels**: De functie `drawRandomCircles(x, y, width, height)` tekent drie cirkels in willekeurige posities binnen de gegeven rechthoek. We gebruiken `Math.random()` om willekeurige x- en y-coördinaten te genereren binnen de grenzen van de rechthoek.
    
-2. **Willekeurige kleuren voor de cirkels**: De functie `getRandomColor()` genereert een willekeurige hex-kleur. Elke cirkel krijgt een willekeurige kleur, zodat ze er anders uitzien elke keer dat de pagina wordt vernieuwd.
+//2. **Willekeurige kleuren voor de cirkels**: De functie `getRandomColor()` genereert een willekeurige hex-kleur. Elke cirkel krijgt een willekeurige kleur, zodat ze er anders uitzien elke keer dat de pagina wordt vernieuwd.
 
-3. **Cirkel positionering**: We zorgen ervoor dat de cirkels niet buiten de rechthoek vallen door de x- en y-coördinaten van de cirkels te beperken, rekening houdend met hun straal (`circleRadius`).
+3//. **Cirkel positionering**: We zorgen ervoor dat de cirkels niet buiten de rechthoek vallen door de x- en y-coördinaten van de cirkels te beperken, rekening houdend met hun straal (`circleRadius`).
 
 ### Hoe het werkt:
-- Elke keer dat je de pagina ververst (bijvoorbeeld door de browser te vernieuwen), worden de cirkels in een nieuwe willekeurige positie getekend binnen de rechthoek.
-- De kleuren van de cirkels zijn ook willekeurig en veranderen elke keer.
+//- Elke keer dat je de pagina ververst (bijvoorbeeld door de browser te vernieuwen), worden de cirkels in een nieuwe willekeurige positie getekend binnen de rechthoek.
+//- De kleuren van de cirkels zijn ook willekeurig en veranderen elke keer
 
 
 CODE BEWEGENDE CIRKELS
@@ -346,4 +344,3 @@ function getRandomColor() {
     }
     return color;
 }
-
