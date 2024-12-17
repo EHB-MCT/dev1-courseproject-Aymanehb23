@@ -8,8 +8,8 @@ let context = canvas.getContext("2d");
 
 
 const CIRCLE_RADIUS = 20; // radius van elke cirkels
-const NUM_CIRCLES = 40; // aantal cirkels per rechthoek
-const RECTANGLE_WIDTH = 300; // Breedte rechthoek
+const NUM_CIRCLES = 60; // aantal cirkels per rechthoek
+const RECTANGLE_WIDTH = 400; // Breedte rechthoek
 const RECTANGLE_HEIGHT = 400; // Hoogte rechthoek
 
 //  posities van de 2 rechthoeken
@@ -48,8 +48,8 @@ function createCircles(rectX, rectY, rectWidth, rectHeight) {
         circles.push({
             x: Math.random() * (rectWidth - 2 * CIRCLE_RADIUS) + rectX + CIRCLE_RADIUS, // Willekeurige X binnen rechthoek
             y: Math.random() * (rectHeight - 2 * CIRCLE_RADIUS) + rectY + CIRCLE_RADIUS, // Willekeurige Y binnen rechthoek
-            dx: (Math.random() - 0.5) * 5, // snelheid in X-richting
-            dy: (Math.random() - 0.5) * 3, //  snelheid in Y-richting
+            dx: (Math.random() - 0.5) * 7, // snelheid in X-richting
+            dy: (Math.random() - 0.5) * 4, //  snelheid in Y-richting
             color: getRandomColor() // kleur 
         });
     }
@@ -59,7 +59,7 @@ function createCircles(rectX, rectY, rectWidth, rectHeight) {
 function drawRectangle(x, y, width, height) {
     context.beginPath();
     context.rect(x, y, width, height);
-    context.fillStyle = "black";
+    context.fillStyle = "#714D40";
     context.fill();
     context.closePath();
 }
