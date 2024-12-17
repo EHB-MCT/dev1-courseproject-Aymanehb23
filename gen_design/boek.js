@@ -77,7 +77,7 @@ function moveCircles(circles, rectX, rectY, rectWidth, rectHeight) {
             circle.dx *= -1; // Keer de richting in X om
         }
 
-        // code om d cirkeltjes tegen het rand laten botsen
+        // code om de cirkeltjes tegen het rand laten botsen
         if (circle.y - CIRCLE_RADIUS < rectY || circle.y + CIRCLE_RADIUS > rectY + rectHeight) {
             circle.dy *= -1; // Keer de richting in Y om
         }
