@@ -91,7 +91,7 @@ function moveCircles(circles, rectX, rectY, rectWidth, rectHeight) {
     }
 }
 
-//een random kleur krijgen voor elke cirkeltjes.
+//een random kleur instellen voor elke cirkeltjes.
 function getRandomColor() {
     const letters = '0123456789ABCDEF';
     let color = '#';
